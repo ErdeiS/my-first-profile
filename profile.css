@@ -1,9 +1,53 @@
+/* ==== A SIMPLE CSS RESET FROM ERIC MEYER ==== */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*page css*/
+
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 100%;
-  font-family: "Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+	box-sizing: border-box;
 }
 
 body {
@@ -11,22 +55,26 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: 'Lora', 'Times New Roman', serif;
 }
 h1 {
   color: rgb(90, 45, 12);
-  font-size: 2em;
+  font-size: 2rem;
+  font-family: 'Istok Web', Arial, sans-serif;
 }
 h2 {
   color: rgb(90, 45, 12);
-  font-size: 1em;
+  font-size: 1.25rem;
+  font-family: 'Istok Web', Arial, sans-serif;
 }
 p {
   color: rgb(135, 67, 18);
   padding-top: 2%;
+  font-size: 1rem;
 }
 img {
-  height: 300px;
-  width: 300px;
+  height: 40%;
+  width: auto;
   border-radius: 50%;
   filter: sepia(90%);
   transition: all 0.5s ease-in-out;  
@@ -36,29 +84,29 @@ img:hover {
   filter: sepia(20%);
 }
 #page {
-  width: 1000px;
+  width: 768px;
+  height: 500px;
   max-width: calc(100vw - 10px);
   margin-top: 5%;
   
 }
 #picture {
   /*background: rgba(255, 0, 0, .5);*/
-  height: 500px;
-  width: 40%;
+  height: 100%;
+  width: 50%;
   float:right;
   text-align: center;
-  margin-top: 20px;
-}
+  }
 #data {
   /*background: rgba(0, 0, 255, .5);*/
-  height: 500px;
-  width: 60%;
-  padding: 20px;
+  height: 100%;
+  width: 50%;
+  padding: 1.5%;
 }
 
 #data li {
   display: inline;
-  padding: 5px;
+  padding: 1.5%;
 }
 #data ul {
   list-style-type: none;
@@ -68,4 +116,28 @@ img:hover {
 }
 i {
   color: rgb(90, 45, 12);
+}
+
+@media (max-width: 768px) {
+  
+  #picture {
+    float:none;
+    height: 50%;
+    width: auto;
+    
+  }
+  img {
+    height: 90%;
+  }
+  
+  #data {
+    width: auto;
+  }
+  
+  #data h1, h2 {
+    text-align: center;
+  }
+  #data ul {
+    text-align: center;
+  }
 }
